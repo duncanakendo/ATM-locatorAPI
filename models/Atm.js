@@ -5,6 +5,7 @@ const AtmSchema = new mongoose.Schema({
       atmId: {
           type: String,
           required: [true, 'Please add store ID'],
+          unique: true,
           trim: true,
           maxlength: [10, 'Atm ID must be less than 10 characters']
         

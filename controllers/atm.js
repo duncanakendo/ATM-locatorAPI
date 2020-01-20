@@ -5,14 +5,14 @@ const Atm = require('../models/Atm');
 
 exports.getAtm = async ( req, res,  next) => {
     try {
-       const atm =await Atm.find();
+       const atm = await Atm.find();
        
-        return res.staus(200).json({
+        return res.status(200).json({
           success: true,
           count: atm.length,
-          data:atm
+          data: atm
         });
-    } catch (error) {
+    } catch (err) {
          console.error(err);
          res.staus(500).json({ error: 'Server error'});
          
