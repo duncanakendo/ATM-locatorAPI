@@ -1,10 +1,10 @@
 const express = require('express');
-const { getAtm } = require('../controllers/atm');
+const { getAtm, addAtm } = require('../controllers/atm');
 
 const router = express.Router();
 
 
-router.route('/').get(getAtm);
+router.route('/').get(getAtm).post(addAtm);
 
 
 
