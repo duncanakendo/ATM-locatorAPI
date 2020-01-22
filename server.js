@@ -21,6 +21,9 @@ app.use(express.json());
 //Enable cors
 app.use(cors());
 
+//set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 //Routes 
 app.use('/api/v1/atm', require('./routes/atm'));
 
